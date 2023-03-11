@@ -87,7 +87,7 @@ public class PayloadGenerator
         var result = new byte[16];
         _crypt.TransformBlock(payload, 0, payload.Length, result, 0);
 
-        return ConvertToHexString(payload);
+        return ConvertToHexString(result);
     }
 
     private static string ConvertToHexString(IEnumerable<byte> payload)
